@@ -1,0 +1,92 @@
+# Translation of Plugins - Menu Image, Icons made easy - Stable (latest release) in Japanese
+# This file is distributed under the same license as the Plugins - Menu Image, Icons made easy - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-03-03 17:30:32+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - Menu Image, Icons made easy - Stable (latest release)\n"
+
+#: menu-image.php:1685
+msgid "Hide"
+msgstr "非表示"
+
+#: menu-image.php:1171 menu-image.php:1191
+msgid "Remove"
+msgstr "削除"
+
+#: menu-image.php:623 menu-image.php:1159 menu-image.php:1716
+msgid "Image"
+msgstr "画像"
+
+#: menu-image.php:1114
+msgid "Chose menu image"
+msgstr "メニュー画像を選択"
+
+#: menu-image.php:1160
+msgid "Change menu item image"
+msgstr "メニュー項目画像を変更"
+
+#: menu-image.php:1160
+msgid "Set menu item image"
+msgstr "メニュー項目画像を設定"
+
+#: menu-image.php:1170
+msgid "Set image"
+msgstr "画像を設定"
+
+#: menu-image.php:1179
+msgid "Image on hover"
+msgstr "マウスオーバー時の画像"
+
+#: menu-image.php:1180
+msgid "Change menu item image on hover"
+msgstr "マウスオーバー時にメニュー項目画像を変更する"
+
+#: menu-image.php:1180
+msgid "Set menu item image on hover"
+msgstr "マウスオーバー時のメニュー項目画像を変更"
+
+#: menu-image.php:1190
+msgid "Set image on hover"
+msgstr "マウスオーバー時の画像を設定"
+
+#: menu-image.php:1745
+msgid "Image size"
+msgstr "画像サイズ"
+
+#: menu-image.php:1756
+msgid "Original Size"
+msgstr "オリジナルの画像サイズ"
+
+#: menu-image.php:1686
+msgid "Above"
+msgstr "上"
+
+#: menu-image.php:1687
+msgid "Below"
+msgstr "下"
+
+#: menu-image.php:1688
+msgid "Before"
+msgstr "前"
+
+#. Plugin Name of the plugin
+msgid "Menu Image"
+msgstr "メニュー画像"
+
+#: menu-image.php:1115
+msgid "Select"
+msgstr "選択"
+
+#: menu-image.php:1689
+msgid "After"
+msgstr "更新後 "
+
+#: menu-image.php:1679
+msgid "Title position"
+msgstr "タイトル位置"

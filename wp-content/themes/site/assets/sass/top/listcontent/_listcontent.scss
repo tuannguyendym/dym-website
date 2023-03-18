@@ -1,0 +1,57 @@
+.top-listcontent {
+  padding-top: 100px;
+  .listcontent-item {
+    border: 1px solid $cl-border;
+    border-radius: 5px;
+    height: 100%;
+    padding: 23px;
+    .listcontent-img {
+        margin-bottom: 45px;
+    }
+    .listcontent-title {
+      text-transform: uppercase;
+      font-weight: 600;
+      padding-top: 12px;
+      padding-bottom: 15px;
+      letter-spacing: 1px;
+      position: relative;
+      &:before {
+        position: absolute;
+        content: "";
+        width: 40px;
+        height: 3px;
+        background-color: $cl-blue;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+    }
+    a:hover {
+
+    }
+  }
+}
+
+@include screen_sp {
+  .top-listcontent {
+    padding-top: 40px;
+    .col--4 {
+      margin-bottom: 20px;
+      .listcontent-item {
+        .listcontent-img {
+          margin-bottom: 20px;
+        }
+        .listcontent-title {
+          font-size: 16px;
+          padding-bottom: 0;
+          padding-top: 10px;
+          &:before {
+            width: 20px;
+          }
+        }
+      }
+    }
+  }
+
+}

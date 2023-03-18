@@ -1,0 +1,32 @@
+.vaccination-page {
+  .info-box {
+    padding-left: 35px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    h5 {
+      font-size: $fs-smallest;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      @include dot_left($left: -34px);
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include screen_sp {
+  .vaccination-page {
+    .info-box {
+      padding-left: 0;
+      h5 {
+        padding-left: 35px;
+        position: relative;
+        &:after {
+          left: 0
+        }
+      }
+    }
+  }
+}

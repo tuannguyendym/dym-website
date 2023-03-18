@@ -1,0 +1,55 @@
+.why-content {
+  padding-top: 5%;
+  .choose-group {
+    display: flex;
+    margin-bottom: 30px;
+    .image {
+      width: 100px;
+      display: flex;
+      align-content: center;
+      flex-wrap: wrap;
+    }
+    img {
+      margin-bottom: 0;
+      width: auto;
+    }
+    .content {
+      flex: 2;
+      h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        padding: 0;
+        span {
+          color: $cl-blue;
+        }
+        &:before {
+          content: none;
+        }
+      }
+      a {
+        color: $cl-blue;
+      }
+      img {
+        vertical-align: middle;
+        margin-left: 10px;
+        height: 9px;
+      }
+    }
+  }
+}
+
+@include screen_sp {
+  .why-content {
+    padding-top: 0;
+    .choose-group {
+      margin-bottom: 15px;
+      .image {
+      display: block;
+    }
+    img {
+      display: inline-block;
+      margin-top: 0;
+      } 
+    }
+  }
+}

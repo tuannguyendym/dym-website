@@ -1,0 +1,162 @@
+.sidebar {
+  padding-left: 5px;
+  padding-top: 5px;
+  margin-right: -2px;
+  &.sticky {
+    float: none;
+    position: fixed;
+    z-index: 6;
+    left: auto;
+  }
+  a {
+    text-decoration: none;
+  }
+  .widget {
+    margin-bottom: 20px;
+    p {
+      font-size: $fs-smallest;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      b {
+        text-transform: uppercase;
+        font-size: $fs-smallest;
+        position: relative;
+        display: block;
+        margin-bottom: 10px;
+        letter-spacing: 0.5px;
+        line-height: 32px;
+        &:before {
+          content: '';
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          display: block;
+          position: absolute;
+          left: -30px;
+          top: 12px;
+        }
+      }
+    }
+    &.widget-block {
+      padding: 15px 35px 20px 54px;
+      border-radius: 2px;
+      border: 1px solid $cl-blue;
+      p b:before {
+        border: 1px solid $cl-blue
+      }
+    }
+    &.widget-hotline {
+      padding: 10px 20px 10px 50px;
+      border-radius: 2px;
+      border: 1px solid $cl-ogrange;
+      p b {
+        margin: 0;
+        &:before {
+          border: 1px solid $cl-ogrange
+        }
+      }
+      a {
+        float: right;
+        font-size: 16px;
+      }
+    }
+    &.widget-menu {
+      ul {
+        .menu-item {
+          border-bottom: 1px solid $cl-border;
+          padding: 0 10px 20px 25px;
+          margin-bottom: 20px;
+          @include dot_left($color:$cl-blue , $size:6px, $left: 0);
+          a {
+            padding-right: 0px;
+          }
+          &:last-child {
+            border-bottom: 0
+          }
+          &.has-child {
+            .nav-link {
+              font-weight: 400;
+              cursor: pointer;
+            }
+            img {
+              max-width: 8px;
+              margin-left: 0px;
+              transition: .2s;
+              vertical-align: middle;
+              position: absolute;
+              right: 0;
+              top: 11px;
+            }
+            ul {
+              overflow: hidden;
+              margin-left: -25px;
+              padding-top: 20px;
+              display: none;
+              li {
+                background-color: $cl-blur;
+                padding: 10px 25px;
+                margin-bottom: 2px;
+                border-left: 3px solid $cl-blur;
+                line-height: 1.5;
+                a {
+                  font-size: $fs-smallest;
+                  font-weight: 600;
+                  letter-spacing: 1px;
+                  text-transform: uppercase;
+                }
+                &.active, &:hover {
+                  border-left: 3px solid $cl-blue;
+                  a {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+            &.submenu-show {
+              border-bottom: 0;
+              padding-bottom: 0;
+              .nav-link {
+                text-decoration: underline;
+              }
+              ul {
+                display: block;
+                margin-right: -10px;
+              }
+              img {
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include screen_sp {
+  .sidebar {
+    .widget {
+      &.widget-menu {
+        ul {
+          .menu-item {
+            border-top: 1px solid $cl-border;
+            border-bottom: 0;
+            padding: 15px 0 0 25px;
+            @include dot_left($color:$cl-blue , $size:6px, $left: 0, $top: 28px);
+            &.current-item {
+              display: none;
+            }
+            &.has-child {
+              img {
+                top: 30px;
+                margin: auto 15px;
+              }
+            }
+          }
+        }
+      }
+      &.widget-block, &.widget-hotline {
+        display: none;
+      }
+    }
+  }
+}

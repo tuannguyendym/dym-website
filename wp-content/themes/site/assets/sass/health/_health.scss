@@ -1,0 +1,155 @@
+.health-page {
+  .info-box {
+    padding-left: 35px;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    h5 {
+      font-size: 15px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      @include dot_left($left: -34px);
+    }
+    
+  }
+  ul {
+    padding-left: 20px;
+    list-style: none;
+  }
+  ol {
+      counter-reset: item;
+      li {
+        margin: 0;
+        list-style-type: none;
+        counter-increment: item;
+        &:before {
+          display: inline-block;
+          padding-right: 6px;
+          font-weight: bold;
+          text-align: right;
+          content: counter(item) ".";
+        }
+      }
+    }
+    .accordion-content {
+      a.link-more {
+        position: relative;
+        padding-right: 25px;
+        font-size: $fs-small;
+        cursor: pointer;
+        background: #fff;
+        margin-bottom: 18px;
+        &:after {
+          content: '';
+          width: 16px;
+          height: 11px;
+          display: block;
+          background:url('../img/common/arrow-forward_blue.png') center no-repeat;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          background-size: auto 9px;
+        }
+      }
+      a[href^="tel:"] {
+          position: static;
+          padding-right: 5px;
+        }
+      } 
+  .related_post {
+    .related_post-item {
+      margin-top: 15px;
+      margin-bottom: 25px;
+      .info {
+        padding-left: 25px;
+        .info-title {
+          padding-bottom: 30px;
+          @include dot_left;
+        }
+      }
+    }
+  }
+  table {
+    width: 100%;
+    border-spacing: 1px;
+    background: $cl-border;
+    th {
+      border-spacing: 1px;
+      background-color: $cl-blur;
+      font-size: $fs-smaller;
+      letter-spacing: 1px;
+      font-weight: bold;
+      text-align: left;
+      padding: 20px;
+      text-transform: uppercase;
+    }
+
+    tr {
+      font-size: 15px;
+      td {
+        border-spacing: 1px;
+        padding: 20px 15px;
+        background-color: $cl-white;
+        a {
+          margin-bottom: 0;
+          padding-left: 20px;
+          position: relative;
+          letter-spacing: 1px;
+          @include dot_left($color: $cl-blur, $left: 0px, $top: 8px);
+          &:hover {
+            @include dot_left($color: $cl-blue, $left: 0px, $top: 8px);
+          }
+        }
+      }
+      .category {
+        font-size: $fs-smaller;
+        text-align: center;
+      }
+    }
+  }
+  .card {
+    border: 1px solid $cl-border;
+    margin-bottom: 20px;
+    .card-header {
+      background-color: $cl-blur;
+      font-size: $fs-smaller;
+      padding: 16px;
+    }
+    .card-body {
+      li {
+        padding: 10px 10px 10px 41px;
+        border-bottom: 1px solid $cl-blur;
+      }
+      a {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: block;
+        h5 {
+          font-size: 15px;
+          font-weight: 400;
+          @include dot_left($color: $cl-blur);
+        }
+        p {
+          margin-bottom: 0
+        }
+        img {
+          width: 7px;
+          position: absolute;
+          right: 30px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &:hover {
+          h5 {
+            @include dot_left($color: $cl-blue);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include screen_sp {
+
+}

@@ -1,0 +1,143 @@
+.doctor-page {
+  .doctor_list {
+    .doctor_list-item {
+      padding: 30px;
+      margin-bottom: 30px;
+      border: 1px solid $cl-border;
+      display: flex;
+      .item_image {
+        flex: 0 0 196px;
+        padding-right: 30px;
+        img {
+          margin-bottom: 0
+        }
+      }
+      .item_info-title {
+        position: relative;
+        font-weight: bold;
+        padding-left: 30px;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 6px;
+        margin-top: 4px;
+        text-align: left;
+        @include dot_left($left: 0);
+      }
+      .item_info-subtitle {
+        font-weight: 400;
+        padding-left: 30px;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+        margin-bottom: 12.5px;
+        text-align: left;
+        color: $cl-blue;
+      }
+      .item_info {
+        position: relative;
+        .item_content {
+          p {
+            margin-bottom: 18px
+          }
+        }
+      }
+      .item_content {
+        .content_more {
+          display: none;
+          padding-bottom: 40px;
+        }
+        .showmore {
+          width: 100%;
+          position: absolute;
+          bottom: 5px;
+          padding-left: 60px;
+          font-size: $fs-small;
+          cursor: pointer;
+          background: #fff;
+          &:after {
+            content: '';
+            width: 40px;
+            height: 3px;
+            display: block;
+            background-color: $cl-blue;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+  .c-heading-2 { line-height: 50px;}
+  .filter {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    span {
+      font-size: $fs-smallest;
+      font-weight: bold;
+      @include dot_left($top: 12px);
+      padding-right: 30px;
+    }
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: 1px solid $cl-border;
+      border-radius: 5px;
+      background: #fff;
+      height: 50px;
+      padding: 0 30px 0 20px;
+      position: relative;
+      background: url('../img/common/icon_down.png') center right 11px no-repeat;
+      background-size: 8px;
+    }
+  }
+}
+
+@include screen_sp {
+  .doctor-page {
+    .doctor_list {
+      .doctor_list-item {
+        display: block;
+        padding: 15px;
+        .item_image {
+          display: flex;
+          align-items: center;
+          img {
+            width: 40%;
+            margin-right: 33px;
+          }
+        }
+        .item_info-title {
+          margin-bottom: 0;
+        }
+        .item_info-subtitle {
+          margin-bottom: 0;
+          padding-left: 0
+        }
+        .item_content {
+          width: 100%;
+          float: none;
+          clear: both;
+          padding: 25px 0;
+          .content_more {
+            padding-bottom: 0;
+          }
+          .showmore {
+            bottom: 0
+          }
+        }
+      }
+    }
+    .filter {
+      padding-left: 25px;
+      margin-bottom: 20px;
+      justify-content: center;
+      span {
+        width: 100%;
+      }
+    }
+  }
+}

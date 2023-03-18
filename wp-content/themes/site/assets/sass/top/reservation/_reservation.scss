@@ -1,0 +1,82 @@
+.top-space {
+  margin-top: 52px;
+  margin-bottom: 55px;
+  .row {
+    justify-content: center;
+  }
+  .space {
+    background: $cl-blur;
+    border-radius: 5px;
+    height: 30px;
+  }
+}
+.top-reservation {
+  position: relative;
+  margin-bottom: 31px;
+  .img-booking {
+    img {
+      width: 100%;
+    }
+  }
+  .booking {
+    position: absolute;
+    right: 65px;
+    top: 35%;
+    color: $cl-white;
+    a {
+      display: flex;
+      align-items: center;
+    }
+    .icon-calendar {
+      background-color: $cl-blue;
+      padding: 20px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+    .text-booking {
+      @include dot_left;
+      padding-left: 22px;
+      padding-right: 28px;
+      font-size: 19px;
+      font-weight: 700;
+      text-transform: uppercase;
+      &:after {
+        left: 0;
+      }
+    }
+    img {
+      vertical-align: middle;
+      display: block;
+      max-width: 24px;
+    }
+  }
+}
+@include screen_sp {
+  .top-space {
+    margin-top: 25px;
+    margin-bottom: 41px;
+    .space {
+      height: 15px;
+      max-width: 85%;
+      margin: 0 auto;
+    }
+  }
+  .top-reservation {
+    margin-top: 12px;
+    margin-bottom: 24px;
+    .booking {
+      position: static;
+      background-color: $cl-main;
+      border-radius: 0 0 5px 5px;
+      padding-top: 27px;
+      padding-left: 26px;
+      padding-bottom: 32px;
+      .text-booking {
+        font-size: 17px;
+        padding-left: 30px;
+        padding-right: 68px;
+      }
+    }
+    }
+    
+}

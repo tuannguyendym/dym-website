@@ -1,0 +1,200 @@
+body.open-popup {
+  .overlay {
+    z-index: 30;
+  }
+}
+
+.inquiry-page {
+  .c-heading-2 span {
+    float: right;
+    font-size: 12px;
+    sup{
+      color: red;
+      font-size: 16px;
+      top: 0em;
+    }
+  }
+  .wpcf7-form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    .col--6 {
+      .note {
+        border-top: 1px solid $cl-border;
+        padding-top: 20px;
+        
+      }
+     p span[class*="col--6"] {
+        display: inline-block;
+        &:first-child {
+          padding-right: 20px;
+          width: 65%;
+        }
+        &:last-child {
+          width: 35%;
+        }
+        input, select {
+          padding-left: 15px;
+          padding-right: 15px;
+          
+        }
+        
+      }
+      } 
+      p span[class*="col--6-date"] {
+        input {
+          background: url('../img/common/icon_calendar-blue.png') 90% center no-repeat;
+          background-size: 14px auto;
+        }
+      }
+    .col--6,.col--12 {
+      padding-left: 15px;
+      padding-right: 15px;
+    h4 {
+      @include dot_left();
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      margin-left: 25px;
+      span {
+        color: red;
+      }
+    }
+    input[type="text"],input[type="tel"],input[type="email"],input[type="date"] , textarea,select {
+      font-size: 16px;
+      border: 1px solid #E4ECF0;
+      border-radius: 5px;
+      padding: 20px 30px;
+      width: 100%;
+      resize: none;
+    }
+    select {
+      appearance: none;
+      background: url('../img/common/icon_down.png') 90% center no-repeat;
+      background-size: 8px auto;
+    }
+    .wpcf7-list-item {
+      margin-left: 0;
+    }
+    input[type="date"]{
+      color: #fff;
+    }
+    input[type="checkbox"] {
+      position: relative;
+      vertical-align: middle;
+      opacity: 0;
+      cursor: pointer;
+      height: 20px;
+      width: 20px;
+      z-index: 9;
+      margin-right: 10px;
+      &:checked ~ .wpcf7-list-item-label {
+        background-color: #1fb7d9;
+        border: 1px solid transparent;
+      }
+      &:checked ~ .wpcf7-list-item-label:after {
+        display: block;
+      }
+    }
+    .wpcf7-list-item-label {
+      position: absolute;
+      top: 0%;
+      left: 0;
+      height: 23px;
+      width: 23px;
+      background-color: #fff;
+      border: 1px solid #E4ECF0;
+      border-radius: 5px;
+      font-size: 0;
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      &:after {
+        left: 6px;
+        top: 5px;
+        width: 7px;
+        height: 12px;
+        border: solid #fff;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+  }
+  .wpcf7-submit {
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 3px;
+    padding: 20px 82px 20px 62px;
+    cursor: pointer;
+    background: url('../img/common/arrow-forward_white.png')  80% center $cl-blue no-repeat;
+  }
+  .ajax-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 100;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+  }
+}
+.wpcf7 form .wpcf7-response-output {
+  display: none !important;
+}
+.jpopup {
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  border-radius: 20px;
+  padding: 30px;
+  background-color: #fff;
+  z-index: 31;
+  text-align: center;
+  display: none;
+  h3 {
+    @include two_dot();
+  }
+  &.thanks {
+    p {
+      margin-bottom: 30px;
+    }
+  
+  }
+  &.error {
+    h3 {
+    @include two_dot($color:$cl-ogrange);
+  }
+  }
+}
+@include screen_sp {
+  .inquiry-page {
+    .wpcf7-form {
+
+        .col--6 , .col--12{
+          input[type="text"],input[type="tel"],input[type="email"],input[type="date"] , textarea,select {
+            padding: 15px;
+          }
+        }
+        .col--6 {
+          width: 100%;
+          p span[class*="col--6"] {
+        &:first-child {
+          width: 55%;
+        }
+        &:last-child {
+          width: 45%;
+        }
+      }
+      }
+      .col--12 .text-right {
+        text-align: center;
+      }
+    }
+  }
+}

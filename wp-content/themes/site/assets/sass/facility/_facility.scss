@@ -1,0 +1,69 @@
+.facility-page {
+  .facility_list-item {
+    margin-bottom: 30px;
+    .item_image {
+      padding-right: 30px;
+      img {
+        margin-bottom: 0
+      }
+    }
+    .item_info-title {
+      position: relative;
+      margin-bottom: 25px;
+      padding-left: 30px;
+      font-size: $fs-smaller;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-align: left;
+      @include dot_left($left: 0);
+    }
+    .item_info {
+      position: relative;
+      .item_content {
+        p {
+          margin-bottom: 18px
+        }
+      }
+    }
+    .item_content {
+      margin-top: 20px;
+      .more {
+        position: relative;
+        padding-right: 25px;
+        font-size: $fs-small;
+        cursor: pointer;
+        background: #fff;
+        margin-bottom: 18px;
+        &:after {
+          content: '';
+          width: 16px;
+          height: 11px;
+          display: block;
+          background:url('../img/common/arrow-forward_blue.png') center no-repeat;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          background-size: auto 9px;
+        }
+      }
+    }
+  }
+
+  .related_post {
+    .related_post-item {
+      margin-top: 15px;
+      margin-bottom: 25px;
+      .info {
+        padding-left: 25px;
+        .info-title {
+            text-transform: uppercase;
+          padding-bottom: 30px;
+          @include dot_left;
+        }
+      }
+    }
+  }
+}
+@include screen_sp {
+}
